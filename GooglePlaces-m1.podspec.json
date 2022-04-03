@@ -1,0 +1,55 @@
+{
+    "authors": "Google, Inc.",
+    "changelog": "https://dl.google.com/dl/cpdc/e29a1237cb175e69/GooglePlaces-6.1.1-CHANGELOG.md",
+    "default_subspecs": [
+        "Places"
+    ],
+    "description": "Use the Google Places API for iOS to enrich your app with detailed information from Google's Places database.",
+    "homepage": "https://developers.google.com/maps/documentation/places/ios-sdk/",
+    "license": {
+        "text": "Copyright 2022 Google",
+        "type": "Copyright"
+    },
+    "name": "GooglePlaces-m1",
+    "platforms": {
+        "ios": "12.0"
+    },
+    "readme": "https://dl.google.com/dl/cpdc/e29a1237cb175e69/GooglePlaces-6.1.1-README.md",
+    "source": {
+        "http": "https://dl.google.com/geosdk/GooglePlaces-6.1.1-beta-xcframework.tar.gz"
+    },
+    "summary": "Google Places SDK for iOS.",
+    "version": "6.1.1-beta",
+    "subspecs": [
+        {
+            "frameworks": [
+                "CoreGraphics",
+                "CoreLocation",
+                "UIKit"
+            ],
+            "libraries": [
+                "c++",
+                "z"
+            ],
+            "name": "Base",
+            "vendored_frameworks": [
+                "GooglePlaces.xcframework"
+            ]
+        },
+        {
+            "dependencies": {
+                "GooglePlaces-m1/Base": [
+                    
+                ]
+            },
+            "frameworks": [
+                "QuartzCore"
+            ],
+            "name": "Places",
+            "resources": [
+                "GooglePlaces.xcframework/ios-x86_64_arm64-simulator/GooglePlaces.framework/Resources/GooglePlaces.bundle"
+            ]
+        }
+    ]
+}
+
